@@ -152,9 +152,9 @@ struct voice_data {
 
 		CComPtr<ISpStream> cpStream;
 		CSpStreamFormat cAudioFmt;
-		if (!SUCCEEDED(cAudioFmt.AssignFormat(SPSF_44kHz16BitMono))) {
+		if (!SUCCEEDED(cAudioFmt.AssignFormat(SPSF_8kHz16BitMono))) {
 			throw std::runtime_error{
-				"Couldn't set audio format (44kHz, 16bit, mono)."
+				"Couldn't set audio format (8kHz, 16bit, mono)."
 			};
 		}
 
